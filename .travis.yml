@@ -1,0 +1,27 @@
+sudo: required
+services:
+  - docker
+env:
+  global:
+    - REGISTRY_USER=kleinchang
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y -o Dpkg::Options::="--force-confold" docker-engine
+
+before_script:
+  - docker pull testblogorganization/cowspeak || true
+script:
+  - docker build --pull --cache-from testblogorganization/cowspeak --tag testblogorganization/cowspeak .
+  - docker run testblogorganization/cowspeak
+
+after_script:
+  - docker images
+
+before_deploy:
+  - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
+deploy:
+  provider: script
+  script: docker push testblogorganization/cowspeak
+  on:
+    branch: master
