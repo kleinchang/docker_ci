@@ -12,10 +12,10 @@ addons:
       - docker-ce
 
 before_script:
-  - docker pull testblogorganization/cowspeak || true
+  - docker pull kleinchang/cowascii || true
 script:
-  - docker build --pull --cache-from testblogorganization/cowspeak --tag testblogorganization/cowspeak .
-  - docker run testblogorganization/cowspeak
+  - docker build --pull --cache-from kleinchang/cowascii --tag kleinchang/cowascii .
+  - docker run kleinchang/cowascii
 
 after_script:
   - docker images
@@ -24,6 +24,6 @@ before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
 deploy:
   provider: script
-  script: docker push kleinchang/docker_ci
+  script: docker push kleinchang/cowascii
   on:
     branch: master
