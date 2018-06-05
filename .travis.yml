@@ -14,8 +14,8 @@ addons:
 before_script:
   - docker pull kleinchang/cowascii || true
 script:
-  - docker build --pull --cache-from kleinchang/cowascii --tag kleinchang/cowascii .
-  - docker run kleinchang/cowascii
+  # - docker build --pull --cache-from kleinchang/cowascii --tag kleinchang/cowascii .
+  # - docker run kleinchang/cowascii
   - docker-compose build ascii
   - docker-compose up ascii
 
