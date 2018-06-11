@@ -11,8 +11,8 @@ addons:
     packages:
       - docker-ce
 
-before_script:
-  - docker pull kleinchang/cowascii || true
+# before_script:
+#   - docker pull kleinchang/cowascii || true
 script:
   # - docker build --pull --cache-from kleinchang/cowascii --tag kleinchang/cowascii .
   # - docker run kleinchang/cowascii
