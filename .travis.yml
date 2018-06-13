@@ -26,6 +26,6 @@ before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
 deploy:
   provider: script
-  script: docker push kleinchang/cowascii
+  script: docker push kleinchang/efcsydney-roster
   on:
     branch: master
