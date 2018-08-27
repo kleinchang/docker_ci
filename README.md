@@ -9,5 +9,5 @@ A news aggregator that allows users to configure the sources of countries to sub
 </p>
 
 # TODO
-1. News Search
-2. Deeping Articles
+1. Search Articles with Specific Keywords
+2. Deep Linking in Push Notification
