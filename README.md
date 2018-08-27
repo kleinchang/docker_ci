@@ -1,5 +1,5 @@
 # docker_ci
-A sample CI config to upload docker image
+A news aggregator that allows users to configure the sources of countries to subscribe. Users can save articles in their bookmark to read later as well.
 
 <p align="center">
   <img src="screenshot/country_of_interest.png" width="200" title="Countries of Interest">
@@ -8,3 +8,6 @@ A sample CI config to upload docker image
   <img src="screenshot/favorites.png" width="200" title="Bookmark Page">
 </p>
 
+# TODO
+1. News Search
+2. Deeping Articles
